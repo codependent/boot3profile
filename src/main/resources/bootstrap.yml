@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: metrics-ingestor
+
+logging:
+  level:
+    org.springframework.web: info
+
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+
+---
+spring:
+  config:
+    activate:
+      on-profile: alt
+
+logging:
+  level:
+    org.springframework.web: debug
+
+server:
+  port: 9696
